@@ -85,8 +85,8 @@ local function revivePlayer()
     end
 
     OnesyncEnableRemoteAttachmentSanitization(true)
-    if GetResourceState("ND_Police") == "started" then
-        exports["ND_Police"]:toggleHandsUp(false, "hu")
+    if GetResourceState("qbx_police") == "started" then
+        exports["qbx_police"]:toggleHandsUp(false, "hu")
     end
 end
 
@@ -389,8 +389,8 @@ local function revive()
     ResetWalk(`move_m@injured`, oldMovement)
 
     OnesyncEnableRemoteAttachmentSanitization(true)
-    if GetResourceState("ND_Police") == "started" then
-        exports["ND_Police"]:toggleHandsUp(false, "hu")
+    if GetResourceState("qbx_police") == "started" then
+        exports["qbx_police"]:toggleHandsUp(false, "hu")
     end
 end
 
