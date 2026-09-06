@@ -1,11 +1,11 @@
 return {
-    timer = 300, -- time in seconds before allowed to respawn.
-    spawnAsDeadTime = 15, -- time in minutes where if you rejoin it will go back and see if you're dead.
+    timer = 600, -- time in seconds before allowed to respawn.
+    spawnAsDeadTime = 600, -- time in minutes where if you rejoin it will go back and see if you're dead.
     keybind = "R", -- respawn keybind.
     dropInventory = false, -- drop player items when respawn.
     damage = 1, -- amount of damage that will be taken every damageInterval when knocked down injured (Must be a whole number).
     damageInterval = 6, -- interavall in seconds player will take damage when knocked down injured.
-    
+
     -- locations player will respawn if they get respawned at mourge.
     mourgeRespawn = {
         vec4(-679.6865, 322.1247, 78.1230, 352.1852),

@@ -36,7 +36,11 @@ end
 
 function bridge.revivePlayer(src)
     TriggerClientEvent("ND_Ambulance:revivePlayer", src)
+    TriggerClientEvent("ND:revivePlayer", src)
     qbx_core:SetMetadata(src, "isDead", false)
+
+    exports.qbx_smallresources:SetHunger(src, 100)
+    exports.qbx_smallresources:SetThirst(src, 100)
 end
 
 lib.addCommand("revive", {
@@ -50,7 +54,7 @@ lib.addCommand("revive", {
         }
     }
 }, function(src, args, raw)
-    bridge.revivePlayer(src)
+    bridge.revivePlayer(args.target)
 end)
 
 function bridge.getAmbulanceCount(jobs)
