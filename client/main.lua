@@ -604,5 +604,3 @@ end)
 if Bridge.getDeathModule then
     Bridge.getDeathModule() -- for frameworks that don't have compatible death system.
 end
-
-exports('toggleHandsUp', toggleHandsUp)
