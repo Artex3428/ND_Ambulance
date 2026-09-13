@@ -15,14 +15,14 @@ dependencies {
 
 files {
     "locales/*.json",
-    "stream/*.ytyp",
+    "stream_enhanced/*.ytyp",
     "data/**",
     "ui/**",
     "client/modules/**",
     "bridge/framework/**/client.lua"
 }
 
-data_file "DLC_ITYP_REQUEST" "stream/*.ytyp"
+data_file "DLC_ITYP_REQUEST" "stream_enhanced/*.ytyp"
 ui_page "ui/index.html"
 
 shared_scripts {
