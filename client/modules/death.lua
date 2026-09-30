@@ -49,11 +49,21 @@ if GetResourceState("spawnmanager"):find("start") then
     end)
 end
 
+local function getVehicleSeat(ped, vehicle)
+    if vehicle == 0 then return nil end
+
+    for seat = -1, GetVehicleMaxNumberOfPassengers(vehicle) - 1 do
+        if GetPedInVehicleSeat(vehicle, seat) == ped then
+            return seat
+        end
+    end
+end
+
 RegisterNetEvent("ND_Ambulance:revivePlayer", function()
     if source == "" then return end
-    local oldPed = cache.ped
+    local oldPed = PlayerPedId()
     local veh = GetVehiclePedIsIn(oldPed)
-    local seat = cache.seat
+    local seat = getVehicleSeat(oldPed, veh)
     local coords = GetEntityCoords(oldPed)
     local armor = GetPedArmour(oldPed)
 
