@@ -448,7 +448,7 @@ CreateThread(function()
         icon = "droplet",
         iconColor = "#eb4034",
         duration = 4000,
-        position = "top-center"
+        position = "top-right"
     }
 
     while true do
