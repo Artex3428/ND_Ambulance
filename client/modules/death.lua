@@ -79,4 +79,6 @@ RegisterNetEvent("ND_Ambulance:revivePlayer", function()
     if veh and veh ~= 0 then
         SetPedIntoVehicle(ped, veh, seat)
     end
+
+    LocalPlayer.state:set('stress', 0, true)
 end)
